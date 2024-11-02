@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class RouteController {
 
-    @GetMapping("/imageview")
-    public String imageview(){
-        return "image";
+    @GetMapping("/askview")
+    public String askview(){
+        return "ask";
     }
 }
