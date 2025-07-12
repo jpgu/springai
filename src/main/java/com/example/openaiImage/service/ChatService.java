@@ -21,11 +21,12 @@ public class ChatService {
     public String getResponseOptions(String message){
         ChatResponse response = chatModel.call(
                 new Prompt(
-                        message,
-                        OpenAiChatOptions.builder()
-                                .withModel("gpt-4o")
-                                .withTemperature(0.4)
-                                .build()
+                    message,
+                    OpenAiChatOptions.builder()
+                        .withModel("gpt-4o")
+                        .withTemperature(0.4)
+                            // 높을수록 범용적이다. 기본값은 0.8 이다.
+                        .build()
                 ));
           return response.getResult().getOutput().getContent();
     }
